@@ -1,0 +1,11 @@
+{
+  "name": "mars-iubenda",
+  "version": "0.1.0",
+  "description": "Iubenda helper for My AR Studio websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Puntoquindici srl - Luca Perusi",
+  "license": "Internal use only"
+}
