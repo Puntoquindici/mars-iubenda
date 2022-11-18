@@ -97,7 +97,7 @@ export default {
       };
 
       const iubendaScripts = [
-        "/debugIubendaBootstrap.js",
+        "/js/debugIubendaBootstrap.js",
         "//cdn.iubenda.com/cs/ccpa/stub.js",
         "//cdn.iubenda.com/cs/iubenda_cs.js"
       ];
