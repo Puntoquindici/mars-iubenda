@@ -15,6 +15,9 @@ export default {
       this.iubendaShouldLog && console.log("youtubeEnabled", this.$store.getters['iubenda/youtubeEnabled'])
       return this.$store.getters['iubenda/youtubeEnabled'];
     },
+    livechatEnabled() {
+      return this.$store.getters["iubenda/livechatEnabled"];
+    },
   },
   methods: {
     installIubenda() {
