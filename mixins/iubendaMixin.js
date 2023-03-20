@@ -49,6 +49,7 @@ export default {
         "cookiePolicyId":  self.$store.getters['iubenda/cookiePolicyId'],
         // "cookiePolicyUrl": this.$i18n.t('links.cookie-policy'),
         // "privacyPolicyUrl": this.$i18n.t('links.privacy-policy'),
+        "reloadOnConsent": true,
         "callback": {
           "onPreferenceExpressedOrNotNeeded": (preference) => { // does not bind? using self
             window.__iubCategories = window._iub.cs.consent.purposes;
