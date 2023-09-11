@@ -20,17 +20,17 @@ export default {
     },
 
 
-    consentGivenForPurpose1() { return this.$store.getters['consentGivenForPurpose1']; },
-    consentGivenForPurpose2() { return this.$store.getters['consentGivenForPurpose2']; },
-    consentGivenForPurpose3() { return this.$store.getters['consentGivenForPurpose3']; },
-    consentGivenForPurpose4() { return this.$store.getters['consentGivenForPurpose4']; },
-    consentGivenForPurpose5() { return this.$store.getters['consentGivenForPurpose5']; },
+    consentGivenForPurpose1() { return this.$store.getters['iubenda/consentGivenForPurpose1']; },
+    consentGivenForPurpose2() { return this.$store.getters['iubenda/consentGivenForPurpose2']; },
+    consentGivenForPurpose3() { return this.$store.getters['iubenda/consentGivenForPurpose3']; },
+    consentGivenForPurpose4() { return this.$store.getters['iubenda/consentGivenForPurpose4']; },
+    consentGivenForPurpose5() { return this.$store.getters['iubenda/consentGivenForPurpose5']; },
 
-    necessaryEnabled() { return this.$store.getters['necessaryEnabled']; },         // level 1
-    functionalityEnabled() { return this.$store.getters['functionalityEnabled']; }, // level 2
-    experienceEnabled() { return this.$store.getters['experienceEnabled']; },       // level 3
-    measurementEnabled() { return this.$store.getters['measurementEnabled']; },     // level 4
-    marketingEnabled() { return this.$store.getters['marketingEnabled']; }          // level 5
+    necessaryEnabled() { return this.$store.getters['iubenda/necessaryEnabled']; },         // level 1
+    functionalityEnabled() { return this.$store.getters['iubenda/functionalityEnabled']; }, // level 2
+    experienceEnabled() { return this.$store.getters['iubenda/experienceEnabled']; },       // level 3
+    measurementEnabled() { return this.$store.getters['iubenda/measurementEnabled']; },     // level 4
+    marketingEnabled() { return this.$store.getters['iubenda/marketingEnabled']; }          // level 5
   },
   methods: {
     installIubenda() {
