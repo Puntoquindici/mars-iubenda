@@ -18,6 +18,19 @@ export default {
     livechatEnabled() {
       return this.$store.getters["iubenda/livechatEnabled"];
     },
+
+
+    consentGivenForPurpose1() { return this.$store.getters['consentGivenForPurpose1']; },
+    consentGivenForPurpose2() { return this.$store.getters['consentGivenForPurpose2']; },
+    consentGivenForPurpose3() { return this.$store.getters['consentGivenForPurpose3']; },
+    consentGivenForPurpose4() { return this.$store.getters['consentGivenForPurpose4']; },
+    consentGivenForPurpose5() { return this.$store.getters['consentGivenForPurpose5']; },
+
+    necessaryEnabled() { return this.$store.getters['necessaryEnabled']; },         // level 1
+    functionalityEnabled() { return this.$store.getters['functionalityEnabled']; }, // level 2
+    experienceEnabled() { return this.$store.getters['experienceEnabled']; },       // level 3
+    measurementEnabled() { return this.$store.getters['measurementEnabled']; },     // level 4
+    marketingEnabled() { return this.$store.getters['marketingEnabled']; }          // level 5
   },
   methods: {
     installIubenda() {

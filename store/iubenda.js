@@ -160,6 +160,12 @@ export default {
     consentGivenForPurpose3(state) { return consentGivenForPurpose(state, 3); },
     consentGivenForPurpose4(state) { return consentGivenForPurpose(state, 4); },
     consentGivenForPurpose5(state) { return consentGivenForPurpose(state, 5); },
+    
+    necessaryEnabled(_state, getters) { return getters.consentGivenForPurpose1; },
+    functionalityEnabled(_state, getters) { return getters.consentGivenForPurpose2; },
+    experienceEnabled(_state, getters) { return getters.consentGivenForPurpose3; },
+    measurementEnabled(_state, getters) { return getters.consentGivenForPurpose4; },
+    marketingEnabled(_state, getters) { return getters.consentGivenForPurpose5; },
 
     siteId(state) { return state.siteId; }, 
     cookiePolicyId(state) { return state.cookiePolicyId; },
