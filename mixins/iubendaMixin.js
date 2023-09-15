@@ -1,5 +1,5 @@
 /* global dataLayer */
-
+const dataLayer = window.dataLayer || null;
 export default {
   computed: {
     iubendaShouldLog() {
