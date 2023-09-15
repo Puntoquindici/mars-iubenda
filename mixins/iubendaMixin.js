@@ -69,14 +69,14 @@ export default {
             self.iubendaShouldLog && console.log("Iubenda cb ");
 
             const ccpaOptedOut = window._iub.cs.api.isCcpaOptedOut();
-            dataLayer.push({
+            dataLayer && dataLayer.push({
               iubenda_ccpa_opted_out:ccpaOptedOut
             });
             self.$store.dispatch("iubenda/setCcpaOptedOut", ccpaOptedOut);
             self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_ccpa_opted_out:" + ccpaOptedOut);
 
             if (!preference) {
-              dataLayer.push({
+              dataLayer && dataLayer.push({
                 event: "iubenda_preference_not_needed"
               });
               self.$store.dispatch("iubenda/setPreferenceNotNeeded", true);
@@ -84,13 +84,13 @@ export default {
             } else {
               self.$store.dispatch("iubenda/setPreferenceNotNeeded", false);
               if (preference.consent === true) {
-                dataLayer.push({
+                dataLayer && dataLayer && dataLayer.push({
                   event: "iubenda_consent_given"
                 });
                 self.$store.dispatch("iubenda/setConsetGiven", true);
                 self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_consent_given");
               } else if (preference.consent === false) {
-                dataLayer.push({
+                dataLayer && dataLayer && dataLayer.push({
                   event: "iubenda_consent_rejected"
                 });
                 self.$store.dispatch("iubenda/setConsetRejected", true);
@@ -99,7 +99,7 @@ export default {
                 self.$store.dispatch("iubenda/resetConsetGivenPurpose");
                 for (var purposeId in preference.purposes) {
                   if (preference.purposes[purposeId]) {
-                    dataLayer.push({
+                    dataLayer && dataLayer.push({
                       event: "iubenda_consent_given_purpose_" + purposeId
                     });
                     self.$store.dispatch("iubenda/setConsetGivenPurpose", {iPurpose: purposeId, bValue: true});
