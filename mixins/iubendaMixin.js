@@ -69,39 +69,49 @@ export default {
             self.iubendaShouldLog && console.log("Iubenda cb ");
 
             const ccpaOptedOut = window._iub.cs.api.isCcpaOptedOut();
-            dataLayer && dataLayer.push({
-              iubenda_ccpa_opted_out:ccpaOptedOut
-            });
+            if(dataLayer) {
+                dataLayer.push({
+                iubenda_ccpa_opted_out:ccpaOptedOut
+              });
+            }
             self.$store.dispatch("iubenda/setCcpaOptedOut", ccpaOptedOut);
             self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_ccpa_opted_out:" + ccpaOptedOut);
 
             if (!preference) {
-              dataLayer && dataLayer.push({
-                event: "iubenda_preference_not_needed"
-              });
+              if(dataLayer) {
+                  dataLayer.push({
+                  event: "iubenda_preference_not_needed"
+                });
+              }
               self.$store.dispatch("iubenda/setPreferenceNotNeeded", true);
               self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_preference_not_needed");
             } else {
               self.$store.dispatch("iubenda/setPreferenceNotNeeded", false);
               if (preference.consent === true) {
-                dataLayer && dataLayer && dataLayer.push({
-                  event: "iubenda_consent_given"
-                });
+                if(dataLayer) {
+                    dataLayer.push({
+                    event: "iubenda_consent_given"
+                  });
+                }
                 self.$store.dispatch("iubenda/setConsetGiven", true);
                 self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_consent_given");
               } else if (preference.consent === false) {
-                dataLayer && dataLayer && dataLayer.push({
-                  event: "iubenda_consent_rejected"
-                });
+                if(dataLayer) {
+                    dataLayer.push({
+                    event: "iubenda_consent_rejected"
+                  });
+                }
                 self.$store.dispatch("iubenda/setConsetRejected", true);
                 self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_consent_rejected");
               } else if (preference.purposes) {
                 self.$store.dispatch("iubenda/resetConsetGivenPurpose");
                 for (var purposeId in preference.purposes) {
                   if (preference.purposes[purposeId]) {
-                    dataLayer && dataLayer.push({
-                      event: "iubenda_consent_given_purpose_" + purposeId
-                    });
+                    if(dataLayer) {
+                        dataLayer.push({
+                        event: "iubenda_consent_given_purpose_" + purposeId
+                      });
+                    }
                     self.$store.dispatch("iubenda/setConsetGivenPurpose", {iPurpose: purposeId, bValue: true});
                     self.iubendaShouldLog && console.log("Iubenda cb: GTag dataLayer push ", "iubenda_consent_given_purpose_" + purposeId);
                   }
