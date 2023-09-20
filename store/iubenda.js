@@ -174,7 +174,7 @@ export default {
 
     clickupFormsEnabled(_state, getters) { return getters.consentGivenForPurpose2; },
     youtubeEnabled(_state, getters) { return getters.consentGivenForPurpose3; },
-    mauticEnabled(_state, getters) { return getters.consentGivenForPurpose5; },
+    mauticEnabled(_state, getters) { return getters.consentGivenForPurpose4; },
     livechatEnabled(_state, getters) { return getters.consentGivenForPurpose2; },
   }
 }
