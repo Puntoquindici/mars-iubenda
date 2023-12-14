@@ -1,11 +1,15 @@
 {
   "name": "mars-iubenda",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Iubenda helper for My AR Studio websites",
   "main": "index.js",
+  "types": "types/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-typings": "npx -p typescript tsc"
   },
   "author": "Puntoquindici srl - Luca Perusi",
-  "license": "Internal use only"
+  "license": "Internal use only",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
