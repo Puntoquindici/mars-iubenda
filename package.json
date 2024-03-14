@@ -2,10 +2,17 @@
   "name": "mars-iubenda",
   "version": "0.2.0",
   "description": "Iubenda helper for My AR Studio websites",
+  "type": "module",
+  "exports": {
+    "./iubenda-install": "./dist/iubenda-install.js",
+    "./mixins/iubendaMixin": "./src/mixins/iubendaMixin.ts",
+    "./store/iubenda": "./src/store/iubenda.ts",
+    "./common/iubenda-install": "./src/common/iubenda-install.ts"
+  },
   "main": "index.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build-typings": "npx -p typescript tsc"
+    "build": "npx tsc"
   },
   "author": "Puntoquindici srl - Luca Perusi",
   "license": "Internal use only",

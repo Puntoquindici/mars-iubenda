@@ -1,0 +1,1 @@
+{"version":3,"file":"iubenda-install.d.ts","sourceRoot":"","sources":["../src/common/iubenda-install.ts"],"names":[],"mappings":"AAAA;;+EAE+E;AAC/E,OAAO,CAAC,MAAM,CAAC;IACb,UAAU,MAAM;QACd,SAAS,EAAE,GAAG,CAAA;QACd,eAAe,EAAE,GAAG,CAAA;QACpB,IAAI,EAAE,GAAG,CAAA;KACV;CACF;AAID,QAAA,MAAM,cAAc,SAAkB,MAAM,qBAAoB,OAAO,WAAiB,GAAG,YAAuB,MAAM,SAuJvH,CAAA;AAED,eAAe,cAAc,CAAA"}
