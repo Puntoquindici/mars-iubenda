@@ -73,7 +73,7 @@ export default {
       "customizeButtonDisplay": true,
       "explicitWithdrawal": true,
       "listPurposes": true,
-      "logo": "https://www.myarstudio.cloud/img/logo.f9e0636a.svg",
+      "logo": "https://www.myarstudio.cloud/assets/img/logo.d9ac90d.svg",
       "position": "float-bottom-center",
       "rejectButtonCaptionColor": "#FFFFFF",
       "rejectButtonColor": "#0073CE",
