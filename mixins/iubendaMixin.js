@@ -39,6 +39,13 @@ export default {
                     "siteId:", this.$store.getters['iubenda/siteId'],
                     "cookiePolicyId:", this.$store.getters['iubenda/cookiePolicyId']);
       const self = this;
+      window.iub = {
+        level1: false,
+        level2: false,
+        level3: false,
+        level4: false,
+        level5: false
+      };
       window.__iubCategories = {};
         /* eslint-disable-next-line */
       window._iub = window._iub || {};
