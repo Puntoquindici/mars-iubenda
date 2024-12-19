@@ -68,7 +68,7 @@ export default {
         'callback': {
           'onPreferenceExpressedOrNotNeeded': (preference) => { // does not bind? using self
             window.__iubCategories = window._iub.cs.consent.purposes
-            iubendaShouldLog && console.log('Iubenda cb ')
+            self.iubendaShouldLog && console.log('Iubenda cb ')
 
             const ccpaOptedOut = window._iub.cs.api.isCcpaOptedOut()
             if (dataLayer) {
